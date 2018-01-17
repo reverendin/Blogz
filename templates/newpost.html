@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+
+{% block content %}
+    <div class="topnav">
+    <a href="/blog">main page</a>
+    <a href="/newpost">add a blog entry</a>
+    </div>
+    <div class="create_post">
+    <h1>Create New Blog</h1>
+    <form method='post'>
+        <label>
+            Title:
+            <input type="text" name='blog' value='{{blog_name}}' />
+        </label>
+        <p class="error">{{title_error}}</p>
+        <label>
+            Body:
+            <input type="text" name='body' value='{{body_name}}' />
+        </label>
+        <p class="error">{{body_error}}</p>
+        <input type="submit" value='Create' />
+    </form>
+    </div>
+    
+
+   <!--  {% if blogs|length == 0 %}
+    <p>No blogs yet</p>
+    {% else %}
+
+        <ul>
+            {% for blog in blogs %}
+            <li>{{blog.name}}
+               #     <input type="hidden" name="blog-id" value="{{blog.id}}" />
+               #     <input type="submit" value="Done!" />
+               # </form>
+            </li>
+            {% endfor %}
+        </ul>
+
+    {% endif %} -->
+
+    <!-- <hr />
+
+    <h2>Blogs</h2>
+
+    
+    {% for blog in blogs %}
+    <h3>{{blog.title}}</h3>
+    <p>{{blog.body}}</p>
+    {% endfor %} -->
+    
+
+{% endblock %}
