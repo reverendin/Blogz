@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="topnav">
+<a href="/blog">main page</a>
+<a href="/newpost">add a blog entry</a>
+</div>
+<div class="blogs">
+    <h1>{{r_post.title}}</h1>
+    <p>{{r_post.body}}</p>
+</div>
+{% endblock %}
