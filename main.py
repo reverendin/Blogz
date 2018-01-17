@@ -39,8 +39,8 @@ def index():
             new_blog = Blog(blog_name, body_name)
             db.session.add(new_blog)
             db.session.commit()
-            blog_id = request.args.get('id')
-            return redirect('/post')
+            blog_id = new_blog.id
+            return redirect('/post?id={}'.format(blog_id))
 
         else:
             return render_template('newpost.html',title="Build a Blog", blog_name=blog_name,title_error=title_error,body_name=body_name, body_error=body_error)
