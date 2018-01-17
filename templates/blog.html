@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="topnav">
+<a href="/blog">main page</a>
+<a href="/newpost">add a blog entry</a>
+</div>
+
+<div class="blogs">
+ <h1>Blogs</h1>
+
+    
+    {% for blog in blogs %}
+    
+    <h3><a href="/post?id={{blog.id}}">{{blog.title}}</a><h3>
+    <p>{{blog.body}}</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
