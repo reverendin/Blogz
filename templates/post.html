@@ -5,5 +5,7 @@
 <div class="blogs">
     <h1>{{r_post.title}}</h1>
     <p>{{r_post.body}}</p>
+    <p>by <a href="/singleUser?id={{r_post.owner_id}}">{{user.name}}</p></a>
+    
 </div>
 {% endblock %}
