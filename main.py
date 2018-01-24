@@ -132,7 +132,9 @@ def logout():
 def read_posts():
     blog_id = request.args.get('id')
     r_post = Blog.query.get(blog_id)
-    return render_template('post.html', r_post=r_post)
+    user_id = request.args.get('id')
+    user = User.query.get(user_id)
+    return render_template('post.html', r_post=r_post, user=user)
 
 if __name__ == '__main__':
     app.run()
