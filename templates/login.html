@@ -1,13 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Log in to Blogz!</h1>
-<p>If you don't have an account, you may <a href="/register">register</a> for one</p>
-<form action="/login" method="post">
-    <label for="email">Email</label>
-    <input name="email" type="email" value="{{ email }}">
-    <label for="password">Password</label>
-    <input name="password" type="password">
-    <input type="submit" value="Login">
-</form>
+
+    <div class="loghead">
+        <h1>Log in to Blogz!</h1>   
+        <p>If you don't have an account, you may <a href="/register">register</a> for one</p>
+    </div>
+    <form action="/login" method="post">
+        <div class="logstyle">
+            <div class="item1">
+                <label for="email">Email:</label>
+            </div>
+            <div class="item2">
+                <input name="email" type="email" value="{{ email }}">
+            </div>
+            <div class="item3">
+                <label for="password">Password:</label>
+            </div>
+            <div class="item4">
+                <input name="password" type="password">
+            </div>
+            <div class="item5">
+                <input type="submit" value="Login">
+            </div>
+        </div>
+    </form>
+
 {% endblock %}
