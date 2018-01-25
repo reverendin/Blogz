@@ -1,16 +1,39 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Register to Get It Done!</h1>
+<div class="loghead">
+    <h1>Register to Blogz!</h1>
+</div>
+
 <form action="/register" method="post">
-    <label for="name">Name</label>
-    <input name="name" type="text">
-    <label for="email">Email</label>
-    <input name="email" type="email" value="{{ email }}">
-    <label for="password">Password</label>
-    <input name="password" type="password">
-    <label for="verify">Verify Password</label>
-    <input name="verify" type="password">
-    <input type="submit" value="Register">
+    <div class="logstyle">
+        <div class="item1">
+            <label for="name">Name</label>
+        </div>
+        <div class="item2">
+            <input name="name" type="text">
+        </div>
+        <div class="item3">
+            <label for="email">Email</label>
+        </div>
+        <div class="item4">
+            <input name="email" type="email" value="{{ email }}">
+        </div>
+        <div class="item6">
+            <label for="password">Password</label>
+        </div>
+        <div class="item7">
+            <input name="password" type="password">
+        </div>
+        <div class="item8">
+            <label for="verify">Verify Password</label>
+        </div>
+        <div class="item9">
+            <input name="verify" type="password">
+        </div>
+        <div class="item10">
+            <input type="submit" value="Register">
+        </div>
+    </div>
 </form>
 {% endblock %}
